@@ -151,3 +151,12 @@ body {
   -ms-transition: transform 0.15s linear;
   -o-transition: transform 0.15s linear;
 }
+
+.ampm {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-align: center;
+  padding: 2px auto;
+  font-size: large;
+  color: aqua;
+}

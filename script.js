@@ -4,8 +4,9 @@ const marginPercentageBtwnCircles = 0.5;
 const sysDate = new Date().toLocaleTimeString();
 const circle = document.querySelectorAll('.circle');
 const circleColons = document.querySelectorAll('.circle-colon');
-let [hh, mm, ss_ampm] = [...new Date().toLocaleTimeString().split(':')];
-// let [hh, mm, ss_ampm] = [...'11:58:57 PM'.split(':')];
+const daypart = document.querySelector('#daypart');
+// let [hh, mm, ss_ampm] = [...new Date().toLocaleTimeString().split(':')];
+let [hh, mm, ss_ampm] = [...'11:59:57 AM'.split(':')];
 let [ss, ampm] = [...ss_ampm.split(' ')];
 if (hh === '12') hh = '00';
 let [hour1, hour2] = [...hh.split('')];
@@ -280,7 +281,15 @@ const showNumByBlock = function (block, num) {
 // showNumByBlock(2, 2);
 // showNumByBlock(3, 7);
 // showNumByBlock(4, 8);
-const initClock = function (hour1, hour2, minute1, minute2, second1, second2) {
+const initClock = function (
+  hour1,
+  hour2,
+  minute1,
+  minute2,
+  second1,
+  second2,
+  dp
+) {
   for (let block = 0; block < 6; block++) {
     switch (block) {
       case 0:
@@ -302,10 +311,12 @@ const initClock = function (hour1, hour2, minute1, minute2, second1, second2) {
         showNumByBlock(block, second2);
         break;
     }
+    daypart.textContent = dp;
   }
 };
 
 const clock = () => {
+  //control seconds
   ss++;
   ss %= 60;
   // console.log(ss);
@@ -317,6 +328,7 @@ const clock = () => {
     showNumByBlock(5, ss.toString()[1]);
   }
 
+  //control minute
   if (ss === 0) {
     mm++;
     mm %= 60;
@@ -328,6 +340,8 @@ const clock = () => {
       showNumByBlock(3, mm.toString()[1]);
     }
   }
+
+  //control hour
   if (mm === 0 && ss === 0) {
     hh++;
     hh %= 12;
@@ -339,10 +353,15 @@ const clock = () => {
       showNumByBlock(1, hh.toString()[1]);
     }
   }
+
+  //control AM / PM
+  if (hh === 0 && mm === 0 && ss === 0) {
+    daypart.textContent = daypart.textContent === 'A' ? 'P' : 'A';
+  }
 };
 
 //initialize clock with system time.
-initClock(hour1, hour2, minute1, minute2, second1, second2);
+initClock(hour1, hour2, minute1, minute2, second1, second2, ampm[0]);
 
 //begin the clock run
 setInterval(clock, 1000);
