@@ -315,6 +315,7 @@ const initClock = function (
   }
 };
 
+//main clock logic
 const clock = () => {
   //control seconds
   ss++;
