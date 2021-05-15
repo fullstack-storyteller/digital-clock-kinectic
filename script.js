@@ -7,12 +7,15 @@ const circleColons = document.querySelectorAll('.circle-colon');
 const daypart = document.querySelector('#daypart');
 let [hh, mm, ss_ampm] = [...new Date().toLocaleTimeString().split(':')];
 // let [hh, mm, ss_ampm] = [...'11:59:57 AM'.split(':')];
+
 let [ss, ampm] = [...ss_ampm.split(' ')];
 if (hh === '12') hh = '00';
+if (hh < 10) hh = '0' + hh;
 let [hour1, hour2] = [...hh.split('')];
 let [minute1, minute2] = [...mm.split('')];
 let [second1, second2] = [...ss.split('')];
-
+// console.log(hh, mm, ss_ampm);
+// console.log(hour1, hour2, minute1, minute2, second1, second2, ampm);
 const mappings = [
   [
     //0
