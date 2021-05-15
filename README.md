@@ -1,6 +1,6 @@
 # Digital Clock - Kinetic
 
-The idea for this project came from the CountToN project i did initially. if you look at that project, I'm displaying the number 0 to 9 using clock dials (kinetically using clock dials). So I thought what is the practical application of this counter application.
+The idea for this project came from the CountToN project i did initially. If you look at that project, I'm displaying the number 0 to 9(kinetically using clock dials). So I thought what is the practical application of this counter application.
 Hence, a digital clock.
 
 ## The project is live at:
