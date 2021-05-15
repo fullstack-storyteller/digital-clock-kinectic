@@ -1,6 +1,6 @@
 const limit = 10;
-const circleRadius = 20;
-const marginPercentageBtwnCircles = 0.5;
+const circleRadius = 10;
+const marginPercentageBtwnCircles = 0.25;
 const sysDate = new Date().toLocaleTimeString();
 const circle = document.querySelectorAll('.circle');
 const circleColons = document.querySelectorAll('.circle-colon');
