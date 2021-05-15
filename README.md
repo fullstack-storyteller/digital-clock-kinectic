@@ -5,7 +5,7 @@ Hence, a digital clock.
 
 ## The project is live at:
 
-https://fullstack-storyteller.github.io/digital-clock-kinetic/
+https://fullstack-storyteller.github.io/digital-clock-kinetic/index.html
 
 ## Had so much fun!!
 
