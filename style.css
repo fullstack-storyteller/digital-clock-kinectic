@@ -9,7 +9,7 @@ body {
 .clock {
   margin-top: 10%;
   display: flex;
-  justify-content: center;
+  justify-content: left;
 }
 .table,
 .table-colon {
