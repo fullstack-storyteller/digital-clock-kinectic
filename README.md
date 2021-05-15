@@ -5,7 +5,7 @@ Hence, a digital clock.
 
 ## The project is live at:
 
-https://fullstack-storyteller.github.io/digital-clock-kinetic/index.html
+https://fullstack-storyteller.github.io/digital-clock-kinetic/
 
 ## Had so much fun!!
 
@@ -14,4 +14,4 @@ I got to play with css properties using javascript. It was not as complicated as
 
 ### The project is not a responsive web design
 
-My main focus was to get the digital clock working, and i made it work. May be in future, i will think of doing a resposive web design, but now, this is it!!
+My main focus was to get the digital clock working, and i made it work. May be in future, i will think of doing a resposive web design, but for now, this is it!!
