@@ -9,6 +9,7 @@ let [hh, mm, ss_ampm] = [...new Date().toLocaleTimeString().split(':')];
 // let [hh, mm, ss_ampm] = [...'11:59:57 AM'.split(':')];
 
 let [ss, ampm] = [...ss_ampm.split(' ')];
+ampm=(new Date()).getHours() >= 12 ? "PM" : "AM";
 if (hh === '12') hh = '00';
 if (hh < 10) hh = '0' + hh;
 let [hour1, hour2] = [...hh.split('')];
